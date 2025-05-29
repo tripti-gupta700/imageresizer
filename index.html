@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Resizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Image Resizer</h1>
+        <input type="file" id="imageInput" accept="image/*">
+        <input type="number" id="widthInput" placeholder="Width (px)">
+        <input type="number" id="heightInput" placeholder="Height (px)">
+        <button id="resizeBtn">Resize</button>
+
+        <div class="resize-buttons">
+            <button class="preset-btn" data-width="900" data-height="900">Instagram</button>
+            <button class="preset-btn" data-width="900" data-height="630">Facebook</button>
+            <button class="preset-btn" data-width="870" data-height="720">YouTube</button>
+            <button class="preset-btn" data-width="800" data-height="600">Website</button>
+        </div>
+        
+        <div class="output">
+            <h3>Resized Image:</h3>
+            <canvas id="imageCanvas"></canvas>
+            <a id="downloadLink" download="resized-image.png">Download Image</a>
+            <p id="resizeStatus"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
